@@ -4,26 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarpiShop</title>
+    <title>Dadi Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <style>
+        body {
+            overflow-y: scroll;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor-productos {
+            max-height: 60vh; /* Ajusta la altura máxima del contenedor para que haya scroll */
+            overflow-y: auto; /* Activa el scroll vertical */
+            padding: 10px; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px;
+            background-color: #f1f1f1; /* Color de fondo del footer */
+            position: relative; /* Posicionamiento relativo */
+        }
+
+        .social-icons {
+            margin: 10px 0; /* Margen para los íconos de redes sociales */
+        }
+
+        .social-icons a {   
+            margin: 0 10px; /* Espacio entre los íconos */
+            color: #333; /* Color de los íconos */
+            text-decoration: none; /* Sin subrayado */
+            font-size: 1.5rem; /* Tamaño de los íconos */
+        }
+
+        /* Personalización del scroll */
+        .contenedor-productos::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .contenedor-productos::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .contenedor-productos::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
 
     <div class="wrapper">
         <header class="header-mobile">
-            <h1 class="logo">CarpiShop</h1>
+            <img src="./img/Dadi store.jpg" alt="Dadi Store Logo" class="logo">
+            <h1>Dadi Store</h1>
             <button class="open-menu" id="open-menu">
                 <i class="bi bi-list"></i>
             </button>
         </header>
+     
         <aside>
             <button class="close-menu" id="close-menu">
                 <i class="bi bi-x"></i>
             </button>
             <header>
-                <h1 class="logo">CarpiShop</h1>
+                <h1 class="logo">Dadi Store</h1>
+                <img src="./img/Dadi store.jpg" alt="Dadi Store Logo" class="logo">
             </header>
             <nav>
                 <ul class="menu">
@@ -47,13 +95,21 @@
                 </ul>
             </nav>
             <footer>
-                <p class="texto-footer">© 2022 Carpi Coder</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/tu_numero" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://facebook.com/tu_pagina" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/tu_perfil" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/tu_perfil" target="_blank" title="Twitter"><i class="bi bi-twitter"></i></a>
+                </div>
+                <p class="texto-footer">© 2024 Dadi Store Medellin-Col </p>
+                
             </footer>
         </aside>
         <main>
             <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            
             <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
+                <!-- Aquí irán los productos -->
             </div>
         </main>
     </div>

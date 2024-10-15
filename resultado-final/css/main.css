@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #4b33a8;
-    --clr-main-light: #785ce9;
+    --clr-main: #045f53;
+    --clr-main-light: #045f53;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
     --clr-red: #961818;
@@ -47,9 +47,11 @@ aside {
 }
 
 .logo {
-    font-weight: 400;
-    font-size: 1.3rem;
+    max-width: 150px; /* Ajusta el ancho máximo según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre el logotipo y el texto */
 }
+
 
 .menu {
     display: flex;
@@ -393,3 +395,10 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+body {
+    overflow-y: scroll; /* Asegura que siempre haya scroll vertical */
+    height: 100vh; /* Ocupa el 100% de la ventana del navegador */
+    margin: 0;
+}
+
